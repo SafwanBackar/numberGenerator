@@ -4,7 +4,22 @@ let div = document.querySelector('div')
 
 for (let i = 0; i < 101; i++) {
 
-    if (isPrime(i)) {
+
+    // if (i === 1) {
+    //     let box = document.createElement('div')
+    //     box.style.height = '100px'
+    //     box.style.width = '100px'
+    //     box.style.backgroundColor = 'yellow'
+    //     box.textContent = i
+    //     box.style.display = 'inline-block'
+    //     box.style.margin = '10px'
+    //     box.style.fontSize = '20px'
+    //     box.style.color = 'white'
+    //     box.style.textAlign = 'center'
+    //     div.appendChild(box)
+
+    // }
+    if (isPrime(i) && i > 2) {
         let box = document.createElement('div')
         box.style.height = '100px'
         box.style.width = '100px'
@@ -18,6 +33,7 @@ for (let i = 0; i < 101; i++) {
         div.appendChild(box)
         continue
     }
+
     if (i % 2 === 0) {
         let box = document.createElement('div')
         box.style.height = '100px'
@@ -47,7 +63,7 @@ for (let i = 0; i < 101; i++) {
 
 
 function isPrime(n) {
-    for (let i = 1; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         if (i === 1) {
             continue;
         }
