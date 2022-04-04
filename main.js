@@ -2,13 +2,28 @@
 
 let div = document.querySelector('div')
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 101; i++) {
+
+    if (isPrime(i)) {
+        let box = document.createElement('div')
+        box.style.height = '100px'
+        box.style.width = '100px'
+        box.style.backgroundColor = 'red'
+        box.textContent = i
+        box.style.display = 'inline-block'
+        box.style.margin = '10px'
+        box.style.fontSize = '20px'
+        box.style.color = 'white'
+        box.style.textAlign = 'center'
+        div.appendChild(box)
+        continue
+    }
     if (i % 2 === 0) {
         let box = document.createElement('div')
         box.style.height = '100px'
         box.style.width = '100px'
         box.style.backgroundColor = 'green'
-        box.textContent = i + 1
+        box.textContent = i
         box.style.display = 'inline-block'
         box.style.margin = '10px'
         box.style.fontSize = '20px'
@@ -29,20 +44,25 @@ for (let i = 0; i < 100; i++) {
         div.appendChild(box)
     }
 }
-// var all = document.querySelectorAll('div')
-// for (let i = 2; i < all.length; i++) {
-//     console.log(all[i].textContent);
-//     if (all[i].textContent % i == 0) {
-//         all[i].style.backgroundColor = 'red'
-//     }
-// }
-// all[2].style.backgroundColor = 'orange'
 
 
-// var n =101
-// for(let i=0;i<n;i++){
-//     if(n%i ===0)
-// }
+function isPrime(n) {
+    for (let i = 1; i < n; i++) {
+        if (i === 1) {
+            continue;
+        }
+        if (n % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+
+
+
+
+
 
 
 
